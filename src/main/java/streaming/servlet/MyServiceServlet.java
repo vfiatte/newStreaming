@@ -20,6 +20,7 @@ import streaming.service.EffacemoiCrudService;
  */
 @WebServlet(name = "MyServiceServlet", urlPatterns = {"/MyServiceServlet"}) 
 public class MyServiceServlet extends AutowireServlet {
+    //Injection d'autowired dans le service
 
     @Autowired
     private EffacemoiCrudService service;

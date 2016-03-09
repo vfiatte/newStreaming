@@ -3,6 +3,8 @@
   <persistence-unit name="streaming_PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>streaming.entity.Effacemoi</class>
+    <class>streaming.entity.Film</class>
+    <class>streaming.entity.Serie</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/streaming"/>
