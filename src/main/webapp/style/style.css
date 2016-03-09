@@ -15,7 +15,8 @@ and open the template in the editor.
     color: white;
 }
 .centrer{
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5%;
     color: black;
 }
