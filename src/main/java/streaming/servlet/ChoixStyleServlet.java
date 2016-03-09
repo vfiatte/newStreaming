@@ -9,22 +9,29 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import streaming.spring.AutowireServlet;
 import streaming.util.CookieUtil;
 
 /**
  *
  * @author admin
  */
-@WebServlet(name = "Homepage", urlPatterns = {"/Homepage"})
-public class Homepage extends HttpServlet {
+@WebServlet(name = "ChoixStyleServlet", urlPatterns = {"/ChoixStyleServlet"})
+public class ChoixStyleServlet extends AutowireServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cookie = CookieUtil.getCookies(req.getCookies(), "pagepreferee");
-        resp.sendRedirect(cookie);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String style = req.getParameter("style");
+        Cookie c = new Cookie("stylepage", style);
+        c.setMaxAge(30);
+        resp.addCookie(c);
+        resp.sendRedirect("AcceuilServlet");
+
     }
 
+    
 }

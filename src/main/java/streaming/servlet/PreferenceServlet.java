@@ -12,19 +12,23 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import streaming.util.CookieUtil;
+import streaming.spring.AutowireServlet;
 
 /**
  *
  * @author admin
  */
-@WebServlet(name = "Homepage", urlPatterns = {"/Homepage"})
-public class Homepage extends HttpServlet {
+@WebServlet(name = "PreferenceServlet", urlPatterns = {"/PreferenceServlet"})
+public class PreferenceServlet extends AutowireServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cookie = CookieUtil.getCookies(req.getCookies(), "pagepreferee");
-        resp.sendRedirect(cookie);
+        req.setAttribute("titre", "Preference");
+        req.getRequestDispatcher("Preference.jsp").include(req, resp);
+        
     }
+    
+
+   
 
 }

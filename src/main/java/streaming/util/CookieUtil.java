@@ -14,7 +14,7 @@ import javax.servlet.http.Cookie;
 public class CookieUtil {
 
     public static String getCookies(Cookie[] mesCookies, String key) {
-        key = "pagepreferee";
+        key = "";
         for (Cookie c : mesCookies) {
             if (c.getName().equals(key)) 
                 return c.getValue();

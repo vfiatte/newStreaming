@@ -12,13 +12,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <c:import url="_CSS.jsp"/>
-        <c:import url="_TITRE.jsp"/>
     </head>
     <body>
+        <c:import url="_TITRE.jsp"/>
         <c:import url="_MENU.jsp"/>
         Titre : ${Film.titre}<br>
         Synopsis : ${Film.synopsis}<br>
-        Annee : ${Film.annee}
+        Annee : ${Film.annee}<br>
+        <br>
+        <a href="ListeFilmServlet">Retour</a>
+        
+        
         <c:import url="_PIED.jsp"/>
     </body>
 </html>

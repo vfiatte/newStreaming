@@ -14,7 +14,7 @@
         <c:import url="_CSS.jsp"/>
     </head>
     <body>
-        <h1>${titre}</h1>
+        <c:import url="_TITRE.jsp"/>
         <c:import url="_MENU.jsp"/><br>
         <div class="centrer">
             <table>

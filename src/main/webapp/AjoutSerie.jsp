@@ -12,10 +12,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:import url="_CSS.jsp"/>
     </head>
-    <h1>Ajouter une serie</h1>
-    <c:import url="_MENU.jsp"/>
-    
+
+
     <body>
+        <c:import url="_TITRE.jsp"/>
+        <c:import url="_MENU.jsp"/>
         <form method="post" action="AjoutSerieServlet">
             <table>
                 <tr>

@@ -7,3 +7,4 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="menu"><a href="ListeFilmServlet?page=Film">Liste des films</a></div>
 <div class="menu"><a href="ListeSerieServlet?page=Serie">Liste des series</a></div>
+<div class="menu"><a href="PreferenceServlet?page=Preference">Preferences</a></div>

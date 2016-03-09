@@ -12,8 +12,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>${titre}</title>
         <c:import url="_CSS.jsp"/>
-        <c:import url="_TITRE.jsp"/>
     </head>
+    <c:import url="_TITRE.jsp"/>
     <c:import url="_MENU.jsp"/>
     <h1>Ajouter un Film</h1>
     <body>
