@@ -25,7 +25,7 @@ public class LoginServlet extends AutowireServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         req.getSession().setAttribute("user", req.getParameter("login"));
-        req.getRequestDispatcher("Login.jsp").include(req, resp);
+        req.getRequestDispatcher("Accueil.jsp").include(req, resp);
         resp.sendRedirect("AccueilServlet");
     }
 
